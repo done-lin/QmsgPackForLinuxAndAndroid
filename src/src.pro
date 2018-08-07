@@ -1,3 +1,8 @@
+##
+## qt 5.6.1 is tested, for unbuntu 16.04 x64, and compile and tested app on android 7.0---- done lin
+## just comple the src directory, and generate a qmsgpackd.a static lib, we must use static lib on Android!
+## 2018.08.07
+##
 QT       += core gui
 
 TARGET = qmsgpack
@@ -8,7 +13,7 @@ DEFINES += MSGPACK_MAKE_LIB
 DESTDIR = $$PWD/../bin
 QMAKE_CXXFLAGS += -fPIC
 
-CONFIG   += debug_and_release
+CONFIG   += debug_and_release  staticlib
 CONFIG(debug, debug|release) {
      TARGET = $$join(TARGET,,,d)
 }
