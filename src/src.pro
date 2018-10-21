@@ -13,6 +13,8 @@ DEFINES += MSGPACK_MAKE_LIB
 DESTDIR = $$PWD/../bin
 QMAKE_CXXFLAGS += -fPIC
 
+## 在ubuntu 16.04 64bit linux上测试通过,生成了a文件在bin目录
+##2018.10.21. 在windows migw, qt5.9.4上测试通过,生成了a文件在bin目录.! ok
 CONFIG   += debug_and_release  staticlib
 CONFIG(debug, debug|release) {
      TARGET = $$join(TARGET,,,d)
