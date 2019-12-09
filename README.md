@@ -70,3 +70,11 @@ Thread-safety
 -------------
 At this time it is not safe to call `MsgPack::registerPacker`, `MsgPack::registerUnpacker` and `MsgPack::setCompatibilityModeEnabled` from different threads.
 pack and unpack methods do not use any global data, so should be safe to use from multiple threads.
+
+
+个人总结：
+这个是一个c++的msgpack文件，不是c的。
+使用方法：
+先打开qt工程，编译邮件编译，生成a文件（静态库），不能生成so文件（修改pro文件才能生产so文件），因为会编译不过，会有问题。
+在编译test文件，有部分test文件不能编译通过对。编译的时候，要找到a文件加载。
+
